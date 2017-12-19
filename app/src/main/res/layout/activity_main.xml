@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ashi.bmi.MainActivity"
+    android:orientation="vertical"
+    android:id="@+id/ll">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/HEADING"
+        android:textSize="45sp"
+        android:textColor="#ed081b"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:id="@+id/t1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t2"
+        android:text="@string/TEXT1"
+        android:layout_below="@+id/t1"
+        android:textSize="30sp"
+        android:textColor="@color/BUTTONCOLOR" />
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t2"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/kg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kg"
+                android:textSize="20sp"
+                android:checked="true"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pounds"
+                android:id="@+id/pounds"
+                android:textSize="20sp"/>
+        </RadioGroup>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg"
+        android:hint="weight"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:id="@+id/e1"
+        android:layout_marginTop="20sp"
+        android:inputType="numberDecimal"
+        android:textColor="#0e0e0e"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TEXT2"
+        android:layout_below="@id/e1"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:id="@+id/t3"
+        android:layout_marginTop="20sp"
+        android:textColor="#0e0e0e"
+        />
+    <RadioGroup
+        android:id="@+id/rg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t3"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/feet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="feet"
+            android:textSize="20sp"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/meter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="centi meter"
+            android:textSize="20sp"
+          />
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="height"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:inputType="numberDecimal"
+        android:id="@+id/e2"
+        android:textColor="#0e0e0e"
+        android:layout_below="@+id/rg2"/>
+    <TableRow android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/rg2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/e2"
+            android:layout_toStartOf="@+id/button"
+            android:background="@drawable/shape"
+            android:backgroundTint="#bb40debb"
+            android:onClick="click"
+            android:text="calculate"
+            android:textSize="13sp" />
+
+
+        <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reset"
+        android:onClick="clickMe"
+        android:textSize="13sp"
+        android:background="@drawable/shape"
+        android:layout_below="@+id/e2"
+        android:backgroundTint="#bb40debb"
+       />
+    </TableRow>
+
+</RelativeLayout>
